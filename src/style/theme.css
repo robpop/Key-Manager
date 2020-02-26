@@ -1,0 +1,114 @@
+@font-face {
+  font-family: Roboto-Light;
+  src: url("../fonts/RobotoCondensed-Light.ttf");
+}
+@font-face {
+  font-family: Roboto-Bold;
+  src: url("../fonts/RobotoCondensed-Bold.ttf");
+}
+@font-face {
+  font-family: Roboto;
+  src: url("../fonts/RobotoCondensed-Regular.ttf");
+}
+
+body {
+  font-family: 'Roboto';
+  /*
+  300, 400, 700
+  */
+  background-image: url("../images/circles-1170340_641.png");
+  background-repeat: repeat;
+  background-size: 320px 320px;
+  background-color: #000;
+  color: #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+h1, h2 {
+  font-family: 'Roboto-Light';
+}
+h1 {
+  font-size: calc(28px + 1vw);
+  margin: 0;
+}
+h2 {
+  font-size: calc(18px + 1vw);
+  margin-top: calc(7px + 1vw);
+}
+input {
+  border: none;
+  border-bottom: 1px solid #ececec;
+  background: transparent;
+  width: 50vw;
+  padding: calc(10px + 1vw);
+  color: #ececec;
+  font-size: calc(16px + 1vw);
+  text-align: center;
+}
+input[type=number] {
+  -webkit-text-security: disc;
+}
+p {
+  font-family: 'Roboto';
+  font-size: calc(14px + 1vw);
+  text-align: center;
+}
+
+.-hidden {
+  display: none!important;
+}
+
+#notification {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: calc(35px + 1vh);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#notification p {
+  margin: 0 auto;
+}
+
+.notification_err {
+  background: #d91e18;
+}
+.notification_msg {
+  background: #26c281;
+}
+
+.full {
+  width: 100vw:
+  height: auto;
+  position: relative;
+  top: calc(-15px - 1vh);
+}
+
+#window__create-pin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.window__create-pin__field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-top: calc(35px + 1vw);
+}
+
+#window__create-pin__field label {
+  font-size: calc(16px + 1vw);
+  margin-bottom: 15px;
+}
