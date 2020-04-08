@@ -16,11 +16,8 @@ body {
   /*
   300, 400, 700
   */
-  background-image: url("../images/circles-1170340_641.png");
-  background-repeat: repeat;
-  background-size: 320px 320px;
-  background-color: #000;
-  color: #ececec;
+  background-color: #2d3436;
+  color: #dfe6e9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,13 +81,6 @@ p {
   background: #26c281;
 }
 
-.full {
-  width: 100vw:
-  height: auto;
-  position: relative;
-  top: calc(-15px - 1vh);
-}
-
 #window__create-pin {
   display: flex;
   justify-content: center;
@@ -111,4 +101,38 @@ p {
 #window__create-pin__field label {
   font-size: calc(16px + 1vw);
   margin-bottom: 15px;
+}
+
+#window__main-view {
+  height: 100%;
+}
+
+#window__main-view a {
+  background: #dfe6e9;
+  width: 200px;
+  height: auto;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #2d3436;
+  padding: 10px;
+}
+
+#window__create-key {
+  width: 100%;
+  height: 100%;
+}
+
+#key_canvas {
+  height: 80%;
+  width: 100%;
+  background: #dfe6e9;
+}
+
+#key_canvas p {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  color: #2d3436;
 }

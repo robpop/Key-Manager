@@ -81,6 +81,9 @@ $(() => {
                   setTimeout(() => {
                     $(window__create_pin).addClass("-hidden");
                   },500);
+                  setTimeout(() => {
+                    window.location.href = "menu.html";
+                  },2000);
                 } else {
                   console.log("PINs Don't Match");
                   pin_mismatch(window__create_pin__field, window__create_pin__verify, storage_available);
@@ -93,6 +96,7 @@ $(() => {
       });
     } else {
       pin = window.localStorage.getItem("pin");
+      window.location.href = "menu.html";
     }
   } else {
     alert("Web storage not supported");
