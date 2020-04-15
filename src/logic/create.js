@@ -51,4 +51,10 @@ $(() => {
       "pointer-events":"auto"
     })
   });
+
+  $("#private_key_use").click(() => {
+    // save the key and go to views
+    window.localStorage.setItem((Math.floor(Math.random() * 1000000)).toString(), "pin~"+$("#private_key").text());
+    window.location.href = "view.html";
+  });
 });
