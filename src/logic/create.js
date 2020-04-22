@@ -26,10 +26,6 @@ function getRandomInt(min, max) {
 
 $(() => {
 	var draw = SVG().addTo("#key_canvas").size("100%", "100%");
-	let xMin = 100;
-	let xMax = $("#key_canvas").width()-100;
-	let yMin = 100;
-	let yMax = $("#key_canvas").height()-100;
   let pkey = null;
   $("#key_canvas").click((e) => {
   	$("#key_canvas p").hide();

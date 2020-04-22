@@ -12,9 +12,18 @@
 <body>
 
 <div id="window__view-keys">
+  <h1>Your keys</h1>
   <ul id="qr_listview">
-    <li><div id="test_qr_code"></div></li>
+    <li class="qr_code__template"><div class="qr_code qr__tiny"></div><p>Description</p></li>
   </ul>
+  <div id="qr_full_view">
+
+    <textarea id="message_curator" placeholder="type a message to encrypt OR paste a message to decrypt"></textarea>
+    <div id="message_curator_btnwrap">
+      <button id="message_curator__encrypt">Encrypt</button>
+      <button id="message_curator__decrypt">Decrypt</button>
+    </div>
+  </div>
 </div>
 
 
