@@ -14,12 +14,15 @@ $(() => {
 	//console.log(pins);
 	
 	let dyn_id_num = 0;
+	let identifier = "key ";
 
 	$.each(pins, function(idx, data){
 		let newcode = $(".qr_code__template").clone(true, true);
 		let dyn_id = "pin__"+dyn_id_num;
 
 		$(newcode).find(".qr_code").attr("id", dyn_id);
+
+		$(newcode).find("p").text(identifier+(dyn_id_num).toString());
 
 		$($(newcode).removeClass("qr_code__template").addClass("qr_code__instance")).appendTo("#qr_listview");
 

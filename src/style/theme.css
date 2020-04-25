@@ -129,6 +129,27 @@ p {
   opacity: 0.5;
 }
 
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 5px;
+  z-index: 2;
+}
+nav a {
+  background: #dfe6e9;
+  width: auto;
+  height: auto;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #2d3436;
+  display: block;
+  padding: 7px;
+}
+nav a:hover {
+  cursor: pointer;
+}
+
 #window__create-key button {
   background: #dfe6e9;
   display: block;
