@@ -219,6 +219,22 @@ p {
 #message_curator__decrypt:hover {
   cursor: pointer;
 }
+#message_curator__close {
+  background: #dfe6e9;
+  display: block;
+  margin: 0 15px;
+  width: 135px;
+  height: auto;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #2d3436;
+  border: none;
+  padding: 15px 10px;
+  font-size: 14px;
+}
+#message_curator__close:hover {
+  cursor: pointer;
+}
 
 #qr_listview {
   list-style: none;

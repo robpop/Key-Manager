@@ -3,6 +3,7 @@
 // uses https://davidshimjs.github.io/qrcodejs/
 
 $(() => {
+	let code_literal = null;
 	const pin_shebang = "pin~";
 	let pins = [];
 	for ( var i = 0, len = window.localStorage.length; i < len; ++i ) {
@@ -38,11 +39,29 @@ $(() => {
 	$(".qr_code__instance").click((e) => {
 		let code = $(e.target).find(".qr_code");
 		let desc = $(e.target).find("p");
-		let code_literal = $(code).attr("title");
+		code_literal = $(code).attr("title");
 		$($(code).removeClass("qr__tiny").addClass("qr__actual")).insertBefore("#message_curator");
 		$(desc).insertBefore("#message_curator");
 		$("#qr_listview").hide();
 		$("#qr_full_view").show();
 	});
+
+
+  $("#message_curator__encrypt").click(() => {
+  	if(code_literal) {
+  		var encryptedAES = CryptoJS.AES.encrypt($("#message_curator").val(), code_literal.toString());
+    	$("#message_curator").val(encryptedAES);
+  	}
+  });
+  $("#message_curator__decrypt").click(() => {
+  	if(code_literal) {
+  		var decryptedBytes = CryptoJS.AES.decrypt($("#message_curator").val(), code_literal.toString());
+	    var plaintext = decryptedBytes.toString(CryptoJS.enc.Utf8);
+	    $("#message_curator").val(plaintext);
+  	}
+  });
+  $("#message_curator__close").click((e) => {
+  	window.location.reload();
+  });
 
 });
