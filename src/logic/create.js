@@ -50,7 +50,7 @@ $(() => {
 
   $("#private_key_use").click(() => {
     // save the key and go to views
-    window.localStorage.setItem((Math.floor(Math.random() * 1000000)).toString(), "pin~"+$("#private_key").text());
+    window.localStorage.setItem((Math.floor(Math.random() * 1000000)).toString(), "pin~"+CryptoJS.AES.encrypt($("#private_key").text(), window.localStorage.getItem("pin").toString()).toString());
     window.location.href = "view.html";
   });
 });

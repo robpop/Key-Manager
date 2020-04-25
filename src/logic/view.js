@@ -8,10 +8,14 @@ $(() => {
 	let pins = [];
 	for ( var i = 0, len = window.localStorage.length; i < len; ++i ) {
 	  if (~(window.localStorage.getItem(window.localStorage.key(i))).indexOf(pin_shebang)) {
-	  	pins.push(window.localStorage.getItem(window.localStorage.key(i)));
+	  	let encrypted_pin = window.localStorage.getItem(window.localStorage.key(i));
+	  	encrypted_pin = encrypted_pin.substring(4);
+	  	encrypted_pin = CryptoJS.AES.decrypt(encrypted_pin, window.localStorage.getItem("pin").toString());
+	    encrypted_pin = encrypted_pin.toString(CryptoJS.enc.Utf8);
+	  	pins.push(encrypted_pin);
 	  }
 	}
-	//console.log(pins);
+	console.log(pins);
 	
 	let dyn_id_num = 0;
 	let identifier = "key ";
